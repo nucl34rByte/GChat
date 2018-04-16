@@ -149,11 +149,9 @@ void sendMessageThread(Chat *chat){
 		uiCursorOffset = 0;
 
 		std::string sMessage;
+
 		std::cout << "[SENDED] ";
 		std::getline(std::cin, sMessage);
-
-		std::cout << sMessage << std::endl;
-
 		switch (chat->sendMessage(sMessage)){
 		case(Chat::SEND_ERROR) :
 			printError("Cannot send a message! Try again!");
